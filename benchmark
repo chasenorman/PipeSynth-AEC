@@ -1,0 +1,6 @@
+#!/bin/bash
+for filename in out/*.sy; do
+    echo "$filename" >> out/results.txt
+    timeout 120m /usr/bin/time -ao out/results.txt ./cvc5 "$filename" >> out/results.txt;
+    echo "" >> out/results.txt
+done

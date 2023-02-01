@@ -1,0 +1,53 @@
+vscale
+ - writes3: fifo
+ - writes: path
+ - reads: path
+ - total_order_on_dx: fifo
+ - writes2: fifo
+ - writeback_stage_is_in_order: fifo
+ - decode_execute_stage_is_in_order: fifo
+ - po__fetch: fifo
+ - dx_order_implies_wb_order: fifo
+ - reads2: fifo sourcing
+
+fivestage
+ - stb_fifo: fifo
+ - writeback_stage_is_in_order: fifo
+ - mfence:
+ - execute_stage_is_in_order: fifo
+ - memory_stage_is_in_order: fifo
+ - decode_stage_is_in_order: fifo
+ - po__fetch: fifo
+ - write_serialization: fifo
+ - rmw: sourcing
+ - writes: path fifo
+ - reads: path fifo fifo sourcing
+
+fivestageoooslr
+ - stb_fifo: fifo
+ - mfence:
+ - po__fetch: fifo
+ - decode_stage_is_in_order: fifo
+ - writeback_is_in_decode_order: fifo
+ - write_serialization: fifo
+ - slr: fifo
+ - rmw: sourcing
+ - writes: path fifo
+ - reads: path fifo fifo fifo sourcing
+
+fivestagepeekaboo
+ - l1_vi_cl_no_dups: fifo
+ - write_is_before_final: fifo
+ - mfence:
+ - po__fetch: fifo
+ - stb__one_at_a_time: fifo
+ - writeback_stage_is_in_order: fifo
+ - memory_stage_is_in_order: fifo
+ - stb_fifo: fifo
+ - decode_stage_is_in_order: fifo
+ - swmr: fifo
+ - execute_stage_is_in_order: fifo
+ - writes: path
+ - rmw: sourcing
+ - reads: path fifo fifo fifo sourcing
+ - l1_vi_c_ls: path fifo sourcing

@@ -1,0 +1,6 @@
+Alternative
+0 0 0 0 (Read normal (VA 0 0) (PA 0 0) (Data 0))
+1 0 0 0 (Write normal (VA 0 0) (PA 0 0) (Data 1))
+Relationship po 0 0 -> 1 0
+Relationship rf 1 0 -> 0 0
+Permitted
