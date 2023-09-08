@@ -13,8 +13,7 @@ Chase Norman, Adwait Godbole, and Yatin A. Manerkar.
 
 ### Contacting the authors
 
-If you have any comments, questions, or feedback, please contact Chase Norman
-at c_@berkeley.edu or visit our GitHub page, https://github.com/chasenorman/PipeSynth-AEC.
+If you have any comments, questions, or feedback, please contact Yan-Ru Jhou (yanruj at umich dot edu), Yatin Manerkar (manerkar at umich dot edu), or visit our GitHub page, https://github.com/chasenorman/PipeSynth-AEC.
 
 ### Status
 
